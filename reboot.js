@@ -1,0 +1,10 @@
+const botAdmin = "message.author.id == '233366720062947330' || message.author.id == '209765088196821012' || message.author.id == '277608955855896576' || message.author.id == '246766026052730880'"
+exports.run = (client, message, args) => {
+             if  (message.author.id == '233366720062947330' || message.author.id == '215509157837537280') {
+        message.channel.sendEmbed({ color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
+        description: "Reboot in progress... Please stand by",
+  footer:  {text: 'Allow AlphaBot about 5-10 seconds before use.'}}).then(process.exit);
+              } else if (message.author.id != '233366720062947330') {
+        message.channel.sendEmbed({ color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
+        description: "This is above your pay grade. (Bot admins only)"})
+}}
